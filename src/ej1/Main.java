@@ -38,9 +38,7 @@ public class Main {
             escribirXML(fileXml);
             cargarXML(fileXml);
         } catch (EOFException e){
-            throw e;
-        }
-        catch (IOException | ClassNotFoundException e) {
+        } catch (IOException | ClassNotFoundException e) {
             throw new RuntimeException(e);
         }
     }
@@ -69,7 +67,6 @@ public class Main {
         else {
             oos = new ObjectOutputStream(new FileOutputStream(fileBin));
         }
-
         for (int i = 0; i < lista.size(); i++) {
             Animal animal = lista.get(i);
             oos.writeObject(animal);
@@ -164,20 +161,8 @@ public class Main {
         // organizar documento
         optimus.setOutputProperty(OutputKeys.INDENT,"yes");
 
-        StreamResult result = new StreamResult(new File("estudiantes.xml"));
+        StreamResult result = new StreamResult(fileXml);
         optimus.transform(ds, result);
         
     }
-
-    private static int menu() {
-        System.out.println("1. Crear Animal");
-        System.out.println("2. Escribir Lista en fichero binario");
-        System.out.println("3. Cargar de fichero binario");
-        System.out.println("4. Escribir lista en XML (DOM/SAX indiferente)");
-        System.out.println("5. Cargar de fichero XML (DOM/SAX indiferente)");
-
-        return sc.nextInt();
-    }
-
-
 }
