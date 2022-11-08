@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Animales>
+    <animal>
+        <especie>a</especie>
+        <raza>a</raza>
+        <edad>1</edad>
+        <color>a</color>
+    </animal>
+    <animal>
+        <especie>a</especie>
+        <raza>a</raza>
+        <edad>2</edad>
+        <color>a</color>
+    </animal>
+</Animales>

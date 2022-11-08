@@ -34,11 +34,11 @@ public class Main {
 
         try {
             escribirBin(fileBin);
-            cargarBin(fileBin);
+            //cargarBin(fileBin);
             escribirXML(fileXml);
             cargarXML(fileXml);
         } catch (EOFException e){
-        } catch (IOException | ClassNotFoundException e) {
+        } catch (IOException e) {
             throw new RuntimeException(e);
         }
     }
